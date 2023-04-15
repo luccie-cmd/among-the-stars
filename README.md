@@ -4,8 +4,8 @@
 ## NOT FINISHED AND DON'T HAVE HIGH EXPAXTATIONS
 
 #### to start
-'''console
+```
  $ make
  $ ./bin/main
-'''
+```
 it's made for both linux and windows but you need to install SDL2, SDL_image
