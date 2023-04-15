@@ -5,6 +5,7 @@
 class Player{
     public: 
         Player(Vec2i pos, SDL_Texture *texture);
+        void Draw(SDL_Renderer* renderer);
         void setX(int x);
         void setY(int y);
         void setPos(int x, int y);
