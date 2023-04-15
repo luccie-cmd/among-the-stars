@@ -1,0 +1,4 @@
+lib/
+SDL2/
+*.exe
+sdl2-config
