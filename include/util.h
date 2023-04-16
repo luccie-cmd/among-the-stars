@@ -25,6 +25,12 @@ class Vec2i {
             Vec2i::SetX(pos.x);
             Vec2i::SetY(pos.y);
         }
+        Vec2i GetPos(){
+            return (Vec2i){
+                Vec2i::GetX(),
+                Vec2i::GetY(),
+            };
+        }
     private:
         int x, y;
 };
@@ -34,10 +40,10 @@ class Vec2f {
             Vec2f::x = x;
             Vec2f::y = y;
         }
-        int GetX(){
+        float GetX(){
             return Vec2f::x;
         }
-        int GetY(){
+        float GetY(){
             return Vec2f::y;
         }
         void SetX(float x){
@@ -49,6 +55,12 @@ class Vec2f {
         void SetPos(Vec2f pos){
             Vec2f::SetX(pos.x);
             Vec2f::SetY(pos.y);
+        }
+        Vec2f GetPos(){
+            return (Vec2f){
+                Vec2f::GetX(),
+                Vec2f::GetY(),
+            };
         }
     private:
         float x, y;

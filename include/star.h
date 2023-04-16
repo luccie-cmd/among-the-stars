@@ -7,12 +7,14 @@
 class Star{
     public:
         Star(Vec2i pos, int diameter, SDL_Texture* texture);
-        void draw(SDL_Renderer* renderer, float scale=1);
+        void draw(SDL_Renderer* renderer, int scale=1);
         void SetX(int x);
         void SetY(int y);
         void SetPos(Vec2i pos);
         int getX();
         int getY();
+        int getW();
+        int getH();
         Vec2i getPos();
 
     private:
