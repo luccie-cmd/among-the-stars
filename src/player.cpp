@@ -5,6 +5,66 @@ Player::Player(Vec2i pos, SDL_Texture* texture){
     Player::texture = texture;
 }
 
+void Player::Move(int key, SDL_Window* window){
+    int window_w, window_h;
+    SDL_GetWindowSize(window, &window_w, &window_h);
+    switch(key){
+        case SDLK_UP: {
+            if(Player:GetY()-PLAYER_SPEED <= 0){
+                break;
+            }
+            Player:SetY(Player:GetY()-PLAYER_SPEED);
+        } break;
+        case SDLK_DOWN: {
+            if(Player:getH()+Player:GetY()+PLAYER_SPEED >= window_h){
+                break;
+            }
+            Player:SetY(Player:GetY()+PLAYER_SPEED);
+        } break;
+        case SDLK_LEFT: {
+            if(Player:GetX()-PLAYER_SPEED <= 0){
+                break;
+            }
+            Player:SetX(Player:GetX()-PLAYER_SPEED);
+        } break;
+        case SDLK_RIGHT: {
+            if(Player:getW()+Player:GetX()+PLAYER_SPEED >= window_w){
+                break;
+            }
+            Player:SetX(Player:GetX()+PLAYER_SPEED);
+        } break;
+    }
+}
+
+void Player::Move(int key, int window_w, int window_h) {
+    switch(key){
+        case SDLK_UP: {
+            if(Player:GetY()-PLAYER_SPEED <= 0){
+                break;
+            }
+            Player:SetY(Player:GetY()-PLAYER_SPEED);
+        } break;
+        case SDLK_DOWN: {
+            if(Player:getH()+Player:GetY()+PLAYER_SPEED >= window_h){
+                break;
+            }
+            Player:SetY(Player:GetY()+PLAYER_SPEED);
+        } break;
+        case SDLK_LEFT: {
+            if(Player:GetX()-PLAYER_SPEED <= 0){
+                break;
+            }
+            Player:SetX(Player:GetX()-PLAYER_SPEED);
+        } break;
+        case SDLK_RIGHT: {
+            if(Player:getW()+Player:GetX()+PLAYER_SPEED >= window_w){
+                break;
+            }
+            Player:SetX(Player:GetX()+PLAYER_SPEED);
+        } break;
+    }
+}
+
 void Player::Draw(SDL_Renderer* renderer, int scale){
     int w, h;
     if(SDL_QueryTexture(Player::texture, NULL, NULL, &w, &h) < 0) {

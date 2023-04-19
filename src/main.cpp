@@ -36,30 +36,7 @@ int main(){
                 } break;
                 case SDL_KEYDOWN: {
                     switch(evs.key.keysym.sym){
-                        case SDLK_UP: {
-                            if(p.GetY()-PLAYER_SPEED <= 0){
-                                break;
-                            }
-                            p.SetY(p.GetY()-PLAYER_SPEED);
-                        } break;
-                        case SDLK_DOWN: {
-                            if(p.getH()+p.GetY()+PLAYER_SPEED >= window_h){
-                                break;
-                            }
-                            p.SetY(p.GetY()+PLAYER_SPEED);
-                        } break;
-                        case SDLK_LEFT: {
-                            if(p.GetX()-PLAYER_SPEED <= 0){
-                                break;
-                            }
-                            p.SetX(p.GetX()-PLAYER_SPEED);
-                        } break;
-                        case SDLK_RIGHT: {
-                            if(p.getW()+p.GetX()+PLAYER_SPEED >= window_w){
-                                break;
-                            }
-                            p.SetX(p.GetX()+PLAYER_SPEED);
-                        } break;
+                        
                     }
                 } break;
             }

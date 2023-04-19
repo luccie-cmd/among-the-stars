@@ -10,6 +10,8 @@
 class Player{
     public: 
         Player(Vec2i pos, SDL_Texture *texture);
+        void Move(int key, int window_width, int window_height);
+        void Move(int key, SDL_Window* window);
         void Draw(SDL_Renderer* renderer, int scale=1);
         void SetX(int x);
         void SetY(int y);
